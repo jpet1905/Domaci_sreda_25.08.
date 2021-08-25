@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(Code.jpg);
+    background-size: cover;
+}
+#forma {
+    width: 45vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+fieldset {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+fieldset, #ispis {
+    border: 2px solid #ff4500;
+    border-radius: 20px;
+    padding: 20px 20px 10px 20px;
+    background-color: rgb(199, 192, 192);
+    animation-name: scale-up-center;
+    animation-duration: 3s;
+    animation: iteration-count + 1;
+}
+
+@keyframes scale-up-center {
+0% {
+    transform: scale(0.5);
+    transform: scale(0.5);
+}
+100% {
+    transform: scale(1);
+    transform: scale(1);
+    }
+}
+
+legend, h3 {
+    font-size: 2em;
+    color: orangered;
+}
+legend {
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255, 0.9);
+}
+input[type=text], input[type=password] {
+    width: 200px;
+    height: 30px;
+}
+div {
+    margin-bottom: 5px;
+}
+div>label:not(#osimove) {
+    display: inline-block;
+    width: 150px;
+}
+#osimove {
+    margin-top: 10px;
+}
+#mg {
+    margin-bottom: 15px;
+}
+#zaselect, select {  
+    margin-left: 100px;
+}
+select {
+    width: 200px; 
+    margin-top: 10px;
+}
+p {
+    /* font-weight: bolder; */
+    font-size: 1.5em;
+    font-style: italic;
+    color: red;
+}
+form i {
+    margin-left: -30px;
+    cursor: pointer;
+}
+input[type=submit], button {
+    padding: 10px 20px;
+    font-weight: bolder;
+    letter-spacing: 0.1em;
+    border-radius: 10px;
+    background-image: linear-gradient(rgb(255, 69, 0, 0.8), rgb(255, 255, 255), rgb(255, 69, 0, 0.8));
+    cursor: pointer;
+    transition: .5s;
+}
+#ispis {
+    position: relative;
+    width: 30vw;
+    height: 95vh;
+    text-align: center;
+}
+#ispis_niza {
+    text-align: left;
+}
+button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domaci zadatak - validacije</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+</head>
+
+<body>
+    <form id="forma">
+        <fieldset>
+            <legend>Licni podaci o kandidatu</legend>
+            <div>
+                <div>
+                    <label><b>Ime: </b></label>
+                    <input id="fname" type="text"  maxlength="15"><br>
+                    <p id="name-error"></p>
+                </div>
+                <div>
+                    <label><b>Prezime: </b></label>
+                    <input id="sname" type="text" maxlength="20"><br>
+                    <p id="surname-error"></p>
+                </div>
+                <label><b>Pol: </b></label><br>
+                <label>Zenski</label>
+                <input id="fg" type="radio" name="gender" value="female" checked><br>
+                <label>Muski</label>
+                <input id="mg" type="radio" name="gender" value="male"><br>
+                <label id="zaselect"><b>Mesto stanovanja:</b></label><br>
+                <select name="city" id="select" size="3">
+                    <option value="0" selected="selected" disabled>Izaberite grad</option>
+                    <option value="novi_sad">Novi Sad</option>
+                    <option value="beograd">Beograd</option>
+                    <option value="kragujevac">Kragujevac</option>
+                    <option value="krusevac">Krusevac</option>
+                    <option value="nis">Nis</option>
+                </select>
+                <p id="select-error"></p>
+            </div>
+            <div>
+                <input type="submit" value="Posalji">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Podaci o obuci</legend>
+            <div>
+                <label><b>Sifra za pristup:</b></label>
+                <input id="password" type="password">
+                <i id="prvi" class="bi bi-eye-slash" id="togglePassword"></i><br>
+                <label><b>Potvrdite sifru:</b></label>
+                <input id="confirm_p" type="password">
+                <i id="drugi" class="bi bi-eye-slash" id="togglePassword"></i><br>
+                <p id="password-error"></p>
+                <label id="osimove"><b>Oznacite obuke za koje se prijavljujete:</b></label><br>
+                <div>
+                    <label>HTML5</label>
+                    <input type="checkbox" value="html">
+                </div>
+                <div>
+                    <label>CSS3 </label>
+                    <input type="checkbox" value="css">
+                </div>
+                <div>
+                    <label>JavaScript</label>
+                    <input type="checkbox" value="js">
+                </div>
+                <div>
+                    <label>React </label>
+                    <input type="checkbox" value="react">
+                </div>
+                <div>
+                    <label>Angular </label>
+                    <input type="checkbox" value="angular">
+                </div>
+                <p id="course-error"></p>
+            </div>
+            <div id="sa_slikom">
+                <img src="coding.png" alt="programski jezici" width="200px">
+            </div>
+        </fieldset>
+    </form>
+    <div id="ispis">
+        <h3>Lista kandidata:</h3>
+        <div id="ispis_niza"></div>
+        <button>Svi kandidati</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
